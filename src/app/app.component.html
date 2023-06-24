@@ -4,11 +4,11 @@ max-[440px]:justify-evenly max-[300px]:justify-start max-[300px]:gap-3 shadow-md
 [ngClass]="[darkMode ? 'bg-[#2b3945] text-white shadow-slate-600' : 'bg-white text-[#111517]']">
   <h1 class="font-bold text-2xl max-[440px]:text-base">Where in the world?</h1>
   <div *ngIf="!darkMode" class="flex items-center gap-[10px] cursor-pointer">
-    <img src="./assets/moon.svg">
+    <img src="./assets/moon.svg" alt="darmode">
     <div class="font-semibold min-w-full max-[440px]:text-sm" (click)="toggleDarkMode()">Dark Mode</div>
   </div>
   <div *ngIf="darkMode" class="flex items-center gap-[10px] cursor-pointer">
-    <img src="./assets/sun.svg">
+    <img src="./assets/sun.svg" alt="lightmode">
     <div class="font-semibold min-w-full max-[440px]:text-sm" (click)="toggleDarkMode()">Light Mode</div>
   </div>
 </header>
