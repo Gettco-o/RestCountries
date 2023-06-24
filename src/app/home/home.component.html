@@ -26,7 +26,7 @@ flex flex-col gap-5"
         [routerLink]="'/'+country.name"
         [ngClass]="[darkMode ? 'bg-[#2b3945]' : 'bg-white']"
         (click)="selectCountry(country)">
-            <img [src]="country.flags.png" class="w-full rounded-t-md h-[150px]">
+            <img [src]="country.flags.png" [alt]="country.name" class="w-full rounded-t-md h-[150px]">
             <div class="p-4 rounded-b-md min-h-[150px] min-w-full"
             [ngClass]="[darkMode ? 'bg-[#2b3945] text-white' : '']">
                 <h2 class="font-bold text-lg">{{country.name}}</h2>

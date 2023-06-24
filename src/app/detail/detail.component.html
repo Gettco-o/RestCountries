@@ -13,7 +13,7 @@ min-h-screen flex flex-col gap-20 max-[440px]:gap-10 max-[639px]:gap-10"
         
     </div>
     <div class="flex justify-between gap-20 min-h-full lg:flex-row md:flex-col sm:flex-col max-[440px]:flex-col max-[639px]:flex-col max-[440px]:items-center max-[639px]:items-center max-[440px]:gap-8 max-[440px]:shadow-lg max-[639px]:gap-8">
-        <img class="xl:w-full min-h-[300px] lg:w-full lg:min-h-[200px] max-[440px]:w-64 max-[639px]:w-66 max-[440px]:min-h-[200px] max-[639px]:min-h-[200px] shadow-lg" [src]="selectedCountry?.flags?.png">
+        <img class="xl:w-full min-h-[300px] lg:w-full lg:min-h-[200px] max-[440px]:w-64 max-[639px]:w-66 max-[440px]:min-h-[200px] max-[639px]:min-h-[200px] shadow-lg" [alt]="selectedCountry?.name" [src]="selectedCountry?.flags?.png">
         <div class="py-8 px-5 w-full flex flex-col gap-5 max-[440px]:gap-3 max-[639px]:gap-3">
             <h2 class="font-bold text-2xl">{{name}}</h2>
             <div class="flex justify-between max-[440px]:flex-col max-[639px]:flex-col max-[440px]:gap-2 max-[639px]:gap-2">
