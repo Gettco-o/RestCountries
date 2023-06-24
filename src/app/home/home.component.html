@@ -6,20 +6,19 @@ flex flex-col gap-5"
         max-[440px]:w-[80%] max-[639px]:w-[46%] font-semibold shadow-lg rounded-md outline-0 pl-5"
         [ngClass]="[darkMode ? 'bg-[#2b3945] text-white' : 'bg-white text-[#858585]']" 
         #search (input)="getCountriesByName(search.value)">
-        <label for="filter" class="outline-0 h-[50px] w-[18%] md:w-[25%] sm:w-[30%] 
-        max-[440px]:w-[60%] max-[639px]:w-[36%] p-2 rounded-md cursor-pointer shadow-lg 
-        font-semibold text-[#858585]">
-            <select name="filter" id="filter" class="w-full h-[50px] p-2"
-            [ngClass]="[darkMode ? 'bg-[#2b3945] text-white' : 'bg-white text-[#858585]']"  
-            #region (input)="getCountriesByRegion(region.value)">
-                <option value="DEFAULT" disabled="" class="cursor-pointer" selected="" hidden="">Filter by Region</option>
-                <option>Africa</option>
-                <option>Americas</option>
-                <option>Asia</option>
-                <option>Europe</option>
-                <option>Oceania</option>
-            </select>
-        </label>
+        
+        <select name="filter" id="filter" class="w-full h-[50px] p-2" class="outline-0 h-[50px] w-[18%] 
+        md:w-[25%] sm:w-[30%] max-[440px]:w-[60%] max-[639px]:w-[36%] p-2 rounded-md cursor-pointer shadow-lg 
+        font-semibold text-[#858585]"
+        [ngClass]="[darkMode ? 'bg-[#2b3945] text-white' : 'bg-white text-[#858585]']"  
+        #region (input)="getCountriesByRegion(region.value)">
+            <option value="DEFAULT" disabled="" class="cursor-pointer" selected="" hidden="">Filter by Region</option>
+            <option>Africa</option>
+            <option>Americas</option>
+            <option>Asia</option>
+            <option>Europe</option>
+            <option>Oceania</option>
+        </select>
         
     </div>
     
