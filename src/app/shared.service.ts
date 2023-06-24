@@ -39,7 +39,7 @@ export class SharedService {
 
     getCountriesByName(name: string): Observable<Country[]> {
         return this.countries.pipe( //this.getCountries will make the requests again to make the page accessible without the homepage
-            map((countries: Country[]) => countries.filter(country => country.name.toLowerCase().includes(name.toLowerCase())))
+            map((countries: Country[]) => countries.filter(country => country.name.toLowerCase().includes(name.trim().toLowerCase())))
           );
     }
 
