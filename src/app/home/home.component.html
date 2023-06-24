@@ -6,6 +6,7 @@ flex flex-col gap-5"
         max-[440px]:w-[80%] max-[639px]:w-[46%] font-semibold shadow-lg rounded-md outline-0 pl-5"
         [ngClass]="[darkMode ? 'bg-[#2b3945] text-white' : 'bg-white text-[#858585]']" 
         #search (input)="getCountriesByName(search.value)">
+        <label for="filter"></label>
         <select name="filter" id="filter" class="outline-0 h-[50px] w-[18%] md:w-[25%] sm:w-[30%] 
         max-[440px]:w-[60%] max-[639px]:w-[36%] p-2 rounded-md cursor-pointer shadow-lg 
         font-semibold text-[#858585]"
