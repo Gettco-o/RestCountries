@@ -15,6 +15,10 @@ export class SharedService {
 
     private darkMode = new BehaviorSubject<boolean>(true);
 
+    private searchState!: {keyword: string, countries: Country[]};
+
+    private filterState!: {keyword: string, countries: Country[]};
+
     constructor(private http: HttpClient) {}
 
     setDarkMode(value: boolean) {
@@ -64,5 +68,21 @@ export class SharedService {
 
     getSelectedCountry() {
         return this.selectedCountry;
+    }
+
+    setSearchState(keyword: string, countries: Country[]) {
+        this.searchState = { keyword, countries };
+    }
+
+    getSearchState(): {keyword: string, countries: Country[]} {
+        return this.searchState;
+    }
+
+    setFilterState(keyword: string, countries: Country[]) {
+        this.filterState = {keyword, countries};
+    }
+
+    getFilterState(): {keyword: string, countries: Country[]} {
+        return this.filterState;
     }
 }

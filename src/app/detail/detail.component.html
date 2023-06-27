@@ -2,11 +2,11 @@
 min-h-screen flex flex-col gap-20 max-[440px]:gap-10 max-[639px]:gap-10"
 [ngClass]="[darkMode ? 'bg-[#202c37] text-white' : 'bg-[#fafafa] text-[#111517]']">
     <div class="mt-20">
-        <div *ngIf="!darkMode" routerLink="/" class="cursor-pointer bg-white w-28 h-9 rounded-lg shadow-md text-sm flex justify-center gap-4"> 
+        <div *ngIf="!darkMode" (click)="onBack()" class="cursor-pointer bg-white w-28 h-9 rounded-lg shadow-md text-sm flex justify-center gap-4"> 
             <img src="./assets/arrow-back-black.svg" alt="Back" class="w-4 py-1"> 
             <span class="text-base py-1.5">Back</span>
         </div>
-        <div *ngIf="darkMode" routerLink="/" class="cursor-pointer bg-[#2b3945] w-28 h-9 rounded-lg shadow-md text-sm flex justify-center gap-4"> 
+        <div *ngIf="darkMode" (click)="onBack()" class="cursor-pointer bg-[#2b3945] w-28 h-9 rounded-lg shadow-md text-sm flex justify-center gap-4"> 
             <img src="./assets/arrow-back-white.svg" alt="Back" class="w-4 py-1"> 
             <span class="text-base py-1.5 text-white">Back</span>
         </div>

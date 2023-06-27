@@ -1,8 +1,9 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Country } from '../country';
 import { SharedService } from '../shared.service';
 import { Subscription } from 'rxjs';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-detail',
@@ -21,12 +22,12 @@ export class DetailComponent implements OnInit, OnDestroy{
 
   countryNames: string[] = [];
 
-
   private routeParamSub!: Subscription;
   private countryNameSub!: Subscription;
 
   
-  constructor(private route: ActivatedRoute, private sharedService: SharedService) { }
+  constructor(private route: ActivatedRoute, private sharedService: SharedService, 
+    private location: Location, private router: Router) { }
 
   ngOnInit(): void {
       this.routeParamSub = this.route.params.subscribe(params => {
@@ -65,6 +66,10 @@ export class DetailComponent implements OnInit, OnDestroy{
         this.darkMode = darkMode;
       })
 
+  }
+
+  onBack() {
+    this.location.back();
   }
 
   ngOnDestroy(): void {
